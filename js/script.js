@@ -226,12 +226,40 @@ document.addEventListener('DOMContentLoaded', () => {
         // Focar no input
         setTimeout(() => apiKeyInput.focus(), 100);
         
+        // Função para validar se o botão confirmar deve estar habilitado
+        function validateApiKey() {
+            const value = apiKeyInput.value.trim();
+            const validationMessage = document.getElementById('api-key-validation-message');
+            
+            if (value) {
+                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                submitBtn.disabled = false;
+                validationMessage.textContent = "API key pronta para uso";
+                validationMessage.classList.remove('text-pink-600');
+                validationMessage.classList.add('text-green-600');
+            } else {
+                submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                submitBtn.disabled = true;
+                validationMessage.textContent = "O botão Confirmar será habilitado após inserir a API key";
+                validationMessage.classList.remove('text-green-600');
+                validationMessage.classList.add('text-pink-600');
+            }
+        }
+        
+        // Aplicar estado inicial do botão
+        validateApiKey();
+        
+        // Adicionar listener para validar o input enquanto digita
+        apiKeyInput.addEventListener('input', validateApiKey);
+        
         // Configurar eventos
         submitBtn.onclick = function() {
             const value = apiKeyInput.value.trim();
-            apiKeyModal.classList.add('modal-hidden');
-            apiKeyModal.classList.remove('modal-visible');
-            callback(value);
+            if (value) {
+                apiKeyModal.classList.add('modal-hidden');
+                apiKeyModal.classList.remove('modal-visible');
+                callback(value);
+            }
         };
         
         cancelBtn.onclick = function() {
@@ -242,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Permitir pressionar Enter para confirmar
         apiKeyInput.onkeypress = function(e) {
-            if (e.key === 'Enter') {
+            if (e.key === 'Enter' && apiKeyInput.value.trim()) {
                 submitBtn.click();
             }
         };

@@ -72,10 +72,11 @@
         <div class="bg-white rounded-3xl shadow-2xl w-full max-w-sm p-6 relative">
             <h3 class="text-xl font-bold text-center mb-4 text-[#FF7A95]">API Key Necessária</h3>
             <p class="text-gray-700 mb-4">Por favor, insira sua chave de API do Google Gemini para esta sessão (Não será salva):</p>
-            <input type="text" id="api-key-input" class="w-full p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-pink-300" placeholder="Sua API key aqui...">
+            <input type="text" id="api-key-input" class="w-full p-2 border border-gray-300 rounded-lg mb-1 focus:outline-none focus:ring-2 focus:ring-pink-300" placeholder="Sua API key aqui...">
+            <p id="api-key-validation-message" class="text-sm text-pink-600 mb-4">O botão Confirmar será habilitado após inserir a API key</p>
             <div class="flex justify-between">
                 <button id="api-key-cancel" class="bg-gray-200 text-gray-700 py-2 px-4 rounded-full font-medium hover:bg-gray-300">Usar receita estática</button>
-                <button id="api-key-submit" class="bg-[#FF7A95] text-white py-2 px-4 rounded-full font-medium hover:bg-pink-600">Confirmar</button>
+                <button id="api-key-submit" class="bg-[#FF7A95] text-white py-2 px-4 rounded-full font-medium hover:bg-pink-600 transition-opacity opacity-50 cursor-not-allowed" disabled>Confirmar</button>
             </div>
         </div>
     </div>
