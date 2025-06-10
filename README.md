@@ -1,1 +1,0 @@
-# receitas-delicias-da-gi

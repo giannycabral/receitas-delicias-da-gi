@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delícias da Gi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body class="bg-[#f6c0d1] min-h-screen flex items-center justify-center p-2 sm:p-4 md:p-6">
+
+    <main style="background-color: #FFD2DE;" class="w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto rounded-3xl shadow-lg p-4 sm:p-6 md:p-8 border-4 border-[#f4939f]">
+        
+        <header style="background-color: #FEE9EB;" class="flex items-center justify-center mb-6 sm:mb-8 -mx-4 -mt-4 sm:-mx-6 md:-mx-8 md:-mt-8 p-4 sm:p-6 rounded-t-2xl">
+            <img src="img/3.png" alt="Logo Delícias da Gi" class="w-12 h-12 sm:w-16 sm:h-16 mr-2 sm:mr-3 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/64x64/fcd9e4/772e2d?text=Gi';">
+            <h1 class="text-[#772e2d] font-bold text-3xl sm:text-4xl md:text-5xl leading-none">Delícias da Gi</h1>
+        </header>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5" id="recipe-grid">
+            <div style="background-color: #fcd4b4; border: 4px solid #FAB47F;" class="p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-between shadow-md hover:shadow-xl transition-shadow duration-300 min-h-[200px]">
+                <div class="recipe-img-container flex items-center justify-center w-24 h-24 mb-3 rounded-full overflow-hidden p-2">
+                    <img src="img/4.png" alt="Cupcake" class="max-w-full max-h-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fcd4b4/894232?text=Cupcake';">
+                </div>
+                <h2 class="font-bold text-[#894232] mb-3 sm:mb-4 text-xl sm:text-2xl leading-tight text-center">Cupcake</h2>
+                <button data-recipe-name="Cupcake" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-1 sm:py-2 rounded-full font-semibold text-md sm:text-lg" style="border: 3px solid #F96884;">Ver Receita</button>
+            </div>
+            <div style="background-color: #F0D5F5; border: 4px solid #DEAEE1;" class="p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-between shadow-md hover:shadow-xl transition-shadow duration-300 min-h-[200px]">
+                <div class="recipe-img-container flex items-center justify-center w-24 h-24 mb-3 rounded-full overflow-hidden p-2">
+                    <img src="img/5.png" alt="Cookie" class="max-w-full max-h-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/F0D5F5/894232?text=Cookie';">
+                </div>
+                <h2 class="font-bold text-[#894232] mb-3 sm:mb-4 text-xl sm:text-2xl leading-tight text-center">Cookie</h2>
+                <button data-recipe-name="Cookie" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-1 sm:py-2 rounded-full font-semibold text-md sm:text-lg" style="border: 3px solid #F96884;">Ver Receita</button>
+            </div>
+            <div style="background-color: #FDE8C4; border: 4px solid #F9CF9C;" class="p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-between shadow-md hover:shadow-xl transition-shadow duration-300 min-h-[200px]">
+                <div class="recipe-img-container flex items-center justify-center w-24 h-24 mb-3 rounded-full overflow-hidden p-2">
+                    <img src="img/6.png" alt="Bolo de Cenoura" class="max-w-full max-h-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/FDE8C4/894232?text=Bolo';">
+                </div>
+                <h2 class="font-bold text-center text-[#894232] mb-3 sm:mb-4 text-xl sm:text-2xl leading-tight">Bolo de Cenoura</h2>
+                <button data-recipe-name="Bolo de Cenoura" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-1 sm:py-2 rounded-full font-semibold text-md sm:text-lg" style="border: 3px solid #F96884;">Ver Receita</button>
+            </div>
+            <div style="background-color: #F2E1C8; border: 4px solid #D6C4A0;" class="p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-between shadow-md hover:shadow-xl transition-shadow duration-300 min-h-[200px]">
+                <div class="recipe-img-container flex items-center justify-center w-24 h-24 mb-3 rounded-full overflow-hidden p-2">
+                    <img src="img/7.png" alt="Pudim" class="max-w-full max-h-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/F2E1C8/894232?text=Pudim';">
+                </div>
+                <h2 class="font-bold text-[#894232] mb-3 sm:mb-4 text-xl sm:text-2xl leading-tight text-center">Pudim</h2>
+                <button data-recipe-name="Pudim" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-1 sm:py-2 rounded-full font-semibold text-md sm:text-lg" style="border: 3px solid #F96884;">Ver Receita</button>
+            </div>
+        </div>
+
+        <footer style="background-color: #FEE9EB;" class="text-center mt-6 sm:mt-8 -mx-4 -mb-4 sm:-mx-6 sm:-mb-6 md:-mx-8 md:-mb-8 p-4 sm:p-6 rounded-b-2xl">
+            <p class="flex items-center justify-center font-bold text-xl sm:text-2xl text-[#894232]">
+                Feito com amor <span class="ml-2 text-xl sm:text-2xl" style="color: #FF7A95;">🩷</span>
+            </p>
+            <button id="change-api-key" class="text-xs text-[#894232] opacity-70 hover:opacity-100 mt-3">Configurar chave API</button>
+        </footer>
+    </main>
+
+    <div id="recipe-modal" class="modal-hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center p-2 sm:p-4 z-50">
+        <div class="bg-white rounded-3xl shadow-2xl w-full max-w-sm sm:max-w-md md:max-w-lg max-h-[90vh] overflow-y-auto p-4 sm:p-6 relative">
+            <button id="close-modal-btn" class="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-500 hover:text-gray-800 z-50 cursor-pointer" onclick="closeModal()">
+                <svg class="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h2 id="modal-recipe-name" class="text-2xl sm:text-3xl font-bold text-center mb-3 sm:mb-4 text-[#FF7A95]"></h2>
+            <div id="modal-recipe-content" class="text-gray-700 space-y-3 sm:space-y-4"></div>
+        </div>
+    </div>
+ <script src="js/script.js"></script>
+</body>
+</html>
