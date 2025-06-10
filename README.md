@@ -1,10 +1,14 @@
 # ✨🧁 Delícias da Gi 🍰✨
 
-![Linha decorativa](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+<p align="center">
+  ・‥…━━━━━━━☆☆━━━━━━━…‥・
+</p>
 
 > *Um mundinho doce e encantado de receitas mágicas para alegrar seu dia!* 💕
 
-![Linha decorativa](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+<p align="center">
+  ・‥…━━━━━━━☆☆━━━━━━━…‥・
+</p>
 
 ## 🌈 Sobre o Projeto 🌈
 
@@ -37,7 +41,10 @@
 ## 🍴 Modo de Preparo 🍴
 
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGU3YjQyZWI2OTc4YTkwYzM5ZDNhZTBkOWZiZDlhZWNjYmFiMzFkZCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/l0MYyKbTGdXGzw9eE/giphy.gif" width="250">
+  🧁👩‍🍳🥣🧠🎂👨‍🍳🍰
+</p>
+<p align="center">
+  ✨ Vamos colocar a mão na massa! ✨
 </p>
 
 ### 🧁 Para saborear:
@@ -53,7 +60,10 @@
 ## 🪄 A Magia da API do Google Gemini 🪄
 
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzEwY2Y0ZjcwYWQ1MjU3YmI0ZjkzYTdlMTUzY2NkOGFjY2ZjMTUwOSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/3o7aCTBBqUwCIPOBKU/giphy.gif" width="250">
+  ✨🔮🌟💫⭐🌠✨
+</p>
+<p align="center">
+  ✨ Momento de magia especial! ✨
 </p>
 
 ### ✨ Para adicionar pó mágico às receitas:
@@ -67,7 +77,10 @@
 ## 📜 Pergaminhos Legais 📜
 
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWY4OWJlNzE4ZTMwOGQzNzQwOWZkNjYyY2Y1ZGMzYzA0YTEwM2FjZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xUPGcyuPRn7nSOz4fS/giphy.gif" width="200">
+  🧾📃📑📝📋📄
+</p>
+<p align="center">
+  ✨ Documentos importantes com glitter ✨
 </p>
 
 Este projeto está sob a proteção mágica da licença MIT - veja o pergaminho [LICENSE](LICENSE) para todos os detalhes encantados. ✨
@@ -75,7 +88,10 @@ Este projeto está sob a proteção mágica da licença MIT - veja o pergaminho 
 ## 💝 Confeiteira Responsável 💝
 
 <p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDlhdzFlc29tM3czZzA4dzA3eXgweGN1NXdjOWhpaWQ1cDl5eXNtcyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/XHeLeuirClNZQ3FfzG/giphy.gif" width="200">
+  👩‍🍳👑💕👨‍🍳💫🧁
+</p>
+<p align="center">
+  ✨ Os magos por trás das receitas ✨
 </p>
 
 <p align="center">
@@ -86,4 +102,6 @@ Este projeto está sob a proteção mágica da licença MIT - veja o pergaminho 
   Espalhe amor e doçura por onde passar! 🧁✨🍰
 </p>
 
-![Linha decorativa](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+<p align="center">
+  ・‥…━━━━━━━☆☆━━━━━━━…‥・
+</p>
