@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Tailwind CSS",
+			"type": "shell",
+			"command": "npx tailwindcss --config ./js/tailwind.config.js --postcss ./js/postcss.config.js -i ./css/input.css -o ./css/output.css --minify",
+			"group": "build",
+			"problemMatcher": [],
+			"isBackground": false
+		},
+		{
+			"label": "Watch Tailwind CSS",
+			"type": "shell",
+			"command": "npx tailwindcss --config ./js/tailwind.config.js --postcss ./js/postcss.config.js -i ./css/input.css -o ./css/output.css --watch",
+			"group": "build",
+			"problemMatcher": [],
+			"isBackground": true
+		}
+	]
+}

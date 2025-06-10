@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados que serão incorporados no build final */
+body {
+  font-family: 'Fredoka', sans-serif;
+}

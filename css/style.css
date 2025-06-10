@@ -12,6 +12,24 @@ body {
 @keyframes spin { to { transform: rotate(360deg); } }
 .loader { border: 4px solid rgba(255, 255, 255, 0.3); border-top-color: #FF7A95; animation: spin 1s linear infinite; }
 
+/* Estilo para o modal de API Key */
+#api-key-input:focus {
+    border-color: #FF7A95;
+    box-shadow: 0 0 0 2px rgba(255, 122, 149, 0.2);
+}
+
+.btn-transition {
+    transition: all 0.2s ease;
+}
+
+.btn-transition:hover {
+    transform: translateY(-2px);
+}
+
+.btn-transition:active {
+    transform: translateY(0);
+}
+
 /* Estilo para os contêineres de imagem */
 .recipe-img-container {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
