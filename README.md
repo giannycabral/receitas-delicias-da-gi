@@ -1,4 +1,6 @@
 # ✨🧁 Delícias da Gi 🍰✨
+https://github.com/user-attachments/assets/52fabdce-c375-4c6e-b451-ea525095eff2
+> *Projeto sendo executado com minha chave Api em ação* 
 
 <p align="center">
   ・‥…━━━━━━━☆☆━━━━━━━…‥・
