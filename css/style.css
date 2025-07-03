@@ -30,16 +30,51 @@ body {
     transform: translateY(0);
 }
 
-/* Estilo para os contêineres de imagem */
+/* Estilos para os cards em layout 2x2 */
 .recipe-img-container {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+    .recipe-img-container {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 768px) {
+    .recipe-img-container {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+#recipe-grid {
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, calc(33.333%));
+    display: grid;
+    width: 100%;
+}
+
+#recipe-grid > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    aspect-ratio: 1/1;
+    width: 100%;
+}
+
+.recipe-img-container {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
     background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 8rem;  /* 128px */
-    height: 8rem; /* 128px */
+    width: 3.5rem;  /* 56px */
+    height: 3.5rem; /* 56px */
 }
 
 .recipe-img-container img {
@@ -47,15 +82,83 @@ body {
     object-position: center;
     width: 100%;
     height: 100%;
-    padding: 4px;
-    transform: scale(0.85);
-    max-width: 90%;
-    max-height: 90%;
+    padding: 3px;
+    transform: scale(0.9);
+    max-width: 95%;
+    max-height: 95%;
     margin: auto;
 }
 
 .recipe-img-container:hover {
     transform: scale(1.05);
+}
+
+/* Estilos para rolagem horizontal */
+.recipe-scroller {
+    position: relative;
+    max-width: min(100%, 480px);
+    margin: 0 auto;
+    overflow: visible;
+}
+
+/* Estilos para os botões de navegação */
+.recipe-nav-button {
+    transition: all 0.3s ease;
+}
+
+.recipe-nav-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 122, 149, 0.3);
+}
+
+.recipe-nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Estilos para os navegadores de página */
+.recipe-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.page-indicator {
+    display: inline-block;
+    min-width: 70px;
+    font-weight: 600;
+    color: #894232;
+    animation: fadeIn 0.5s;
+}
+
+.recipe-nav-button svg {
+    margin: 0 auto;
+}
+
+/* Estilos para o footer */
+footer {
+    padding-top: 0.5rem;
+    padding-bottom: 0.75rem;
+}
+
+footer a svg {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer a:hover svg {
+    transform: scale(1.15);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+    100% { transform: translateY(0px); }
+}
+
+footer .heart-icon {
+    animation: float 3s ease-in-out infinite;
+    display: inline-block;
 }
 
 /* Melhorias para responsividade em dispositivos muito pequenos */
@@ -67,6 +170,9 @@ body {
         width: 70px;
         height: 70px;
     }
+    footer .social-icons {
+        margin-top: 0.5rem;
+    }
 }
 
 /* Ajustes para telas maiores */
@@ -74,5 +180,9 @@ body {
     .recipe-img-container {
         width: 120px;
         height: 120px;
+    }
+    
+    footer .divider {
+        width: 16px;
     }
 }

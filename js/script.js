@@ -8,9 +8,145 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Modal element:', modal);
     console.log('Close button element:', closeModalBtn);
 
+    // Inicializar navegação de receitas
+    const recipeScroller = document.querySelector('.recipe-scroller');
+    const prevButton = document.getElementById('prev-page');
+    const nextButton = document.getElementById('next-page');
+    const pageIndicator = document.querySelector('.page-indicator');
+    
+    // Variáveis de controle da paginação
+    let currentPage = 0;
+    let totalPages = 1;
+    
+    // Configurar navegação após o carregamento completo da página
+    window.addEventListener('load', () => {
+        // Determinar o número total de páginas
+        const recipes = document.querySelectorAll('#recipe-grid > div');
+        totalPages = Math.ceil(recipes.length / 6);
+        
+        // Atualizar o indicador de páginas
+        updatePageIndicator();
+        
+        // Configurar os botões de navegação
+        if (prevButton) {
+            prevButton.addEventListener('click', () => {
+                if (currentPage > 0) {
+                    currentPage--;
+                    updatePageDisplay();
+                }
+            });
+        }
+        
+        if (nextButton) {
+            nextButton.addEventListener('click', () => {
+                if (currentPage < totalPages - 1) {
+                    currentPage++;
+                    updatePageDisplay();
+                }
+            });
+        }
+        
+        // Configuração inicial
+        updatePageDisplay();
+    });
+
+    // Atualiza a exibição da página atual
+    function updatePageDisplay() {
+        // Atualiza o indicador de página
+        updatePageIndicator();
+        
+        // Determina quais receitas mostrar
+        const recipes = document.querySelectorAll('#recipe-grid > div');
+        const recipesPerPage = 6;
+        const startIndex = currentPage * recipesPerPage;
+        const endIndex = startIndex + recipesPerPage;
+        
+        // Atualiza a visibilidade das receitas
+        recipes.forEach((recipe, index) => {
+            if (index >= startIndex && index < endIndex) {
+                recipe.style.display = 'flex';
+            } else {
+                recipe.style.display = 'none';
+            }
+        });
+        
+        // Atualiza o estado dos botões
+        if (prevButton) {
+            prevButton.disabled = currentPage === 0;
+            prevButton.classList.toggle('opacity-50', currentPage === 0);
+            prevButton.classList.toggle('cursor-not-allowed', currentPage === 0);
+        }
+        
+        if (nextButton) {
+            nextButton.disabled = currentPage === totalPages - 1;
+            nextButton.classList.toggle('opacity-50', currentPage === totalPages - 1);
+            nextButton.classList.toggle('cursor-not-allowed', currentPage === totalPages - 1);
+        }
+    }
+    
+    // Atualiza o indicador de página
+    function updatePageIndicator() {
+        if (pageIndicator) {
+            pageIndicator.textContent = `Página ${currentPage + 1}/${totalPages}`;
+        }
+    }
+
     // Função para exibir receitas estáticas pré-definidas quando o usuário não fornece API key
     function showStaticRecipe(recipeName) {
         const staticRecipes = {
+            'Brigadeiro': {
+                ingredients: [
+                    "1 lata de leite condensado (395g) 🍬",
+                    "3 colheres (sopa) de chocolate em pó 🍫",
+                    "1 colher (sopa) de manteiga sem sal 🧈",
+                    "1 pitadinha de sal 🧂",
+                    "Chocolate granulado para decorar 🌈"
+                ],
+                steps: [
+                    "Em uma panela antiaderente, coloque o leite condensado, o chocolate em pó, a manteiga e o salzinho ✨",
+                    "Misture tudo com carinho antes de levar ao fogo para os ingredientes ficarem amiguinhos 💕",
+                    "Leve ao fogo médio-baixo, mexendo sem parar com uma colher de pau (parece uma dança!) 💃",
+                    "Continue mexendo por cerca de 10-15 minutinhos, até a massa desgrudar do fundo da panela 🕐",
+                    "O ponto certo é quando você passa a colher e consegue ver o fundo da panela por alguns segundos ✨",
+                    "Despeje a massa em um prato untado com manteiga e deixe esfriar completamente 🧊",
+                    "Depois que esfriar, passe um pouquinho de manteiga nas mãos para não grudar 👐",
+                    "Faça bolinhas pequenas (do tamanho que seu coração mandar!) 🍫",
+                    "Passe as bolinhas no chocolate granulado, cobrindo toda a superfície 🌈",
+                    "Coloque cada brigadeirinho em forminhas de papel coloridas 🌸",
+                    "Se conseguir esperar, leve à geladeira por 30 minutinhos antes de servir (quase impossível resistir!) 💖"
+                ]
+            },
+            'Pão de Mel': {
+                ingredients: [
+                    "2 xícaras de farinha de trigo ✨",
+                    "1 xícara de mel puro 🍯",
+                    "1/2 xícara de açúcar mascavo 🍭",
+                    "1 xícara de leite morno 🥛",
+                    "2 colheres (sopa) de manteiga derretida 🧈",
+                    "1 ovo 🥚",
+                    "1 colher (sopa) de chocolate em pó 🍫",
+                    "1 colher (sopa) de canela em pó 🌰",
+                    "1 colher (chá) de cravo em pó 🌱",
+                    "1 colher (chá) de bicarbonato de sódio 🧪",
+                    "Para a cobertura: 200g de chocolate meio amargo derretido 🍫"
+                ],
+                steps: [
+                    "Em uma tigela grande, misture a farinha, o chocolate em pó, a canela, o cravo e o bicarbonato - todas as coisinhas sequinhas! 🌸",
+                    "Em outra tigela, bata o ovo com o açúcar mascavo até ficar fofinho como nuvem ☁️",
+                    "Adicione o mel, o leite morno e a manteiga derretida, mexendo com carinho para fazer uma mistura mágica 🪄",
+                    "Aos poucos, vá incorporando os ingredientes secos à mistura molhada, mexendo com delicadeza 🧁",
+                    "A massa ficará bem molinha e perfumada - não se preocupe, é assim mesmo! 💕",
+                    "Despeje a massa em uma forma retangular forrada com papel manteiga 📝",
+                    "Asse em forno preaquecido a 180°C por aproximadamente 20-25 minutinhos encantados 🧚‍♀️",
+                    "Espete um palito para verificar se está assado - deve sair limpo e feliz! 🧪",
+                    "Deixe esfriar completamente antes de cortar em quadradinhos ou retângulos 🍯",
+                    "Derreta o chocolate em banho-maria ou no micro-ondas com cuidadinho 🍫",
+                    "Mergulhe cada pedacinho de pão de mel no chocolate derretido, cobrindo completamente 🧁",
+                    "Coloque em uma grade para o excesso de chocolate escorrer e a casquinha ficar crocante 🌟",
+                    "Deixe secar completamente antes de servir ou guardar em um potinho fechado 🎁",
+                    "Estes paezinhos de mel duram até 5 dias guardados... mas vão sumir bem antes disso! 😉"
+                ]
+            },
             'Cupcake': {
                 ingredients: [
                     "2 xícaras de farinha de trigo peneirada ✨",

@@ -12,48 +12,108 @@
 </head>
 <body class="bg-[#f6c0d1] min-h-screen flex items-center justify-center p-2 sm:p-4 md:p-6">
 
-    <main style="background-color: #FFD2DE;" class="w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto rounded-3xl shadow-lg p-4 sm:p-6 md:p-8 border-4 border-[#f4939f]">
+    <main style="background-color: #FFD2DE;" class="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl mx-auto rounded-3xl shadow-lg p-4 sm:p-6 md:p-8 border-4 border-[#f4939f]">
         
         <header style="background-color: #FEE9EB;" class="flex items-center justify-center mb-6 sm:mb-8 -mx-4 -mt-4 sm:-mx-6 md:-mx-8 md:-mt-8 p-4 sm:p-6 rounded-t-2xl">
             <img src="img/4.png" alt="Logo Delícias da Gi" class="w-12 h-12 sm:w-16 sm:h-16 mr-2 sm:mr-3 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/64x64/fcd9e4/772e2d?text=Gi';">
             <h1 class="text-[#772e2d] font-bold text-3xl sm:text-4xl md:text-5xl leading-none">Delícias da Gi</h1>
         </header>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5" id="recipe-grid">
-            <div style="background-color: #fcd4b4; border: 4px solid #FAB47F;" class="p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-between shadow-md hover:shadow-xl transition-shadow duration-300 min-h-[200px]">
-                <div class="recipe-img-container flex items-center justify-center mb-3 rounded-full overflow-hidden">
-                    <img id="cupcake-img" src="img/3.png" alt="Cupcake" class="object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fcd4b4/894232?text=Cupcake';">
+        <div class="overflow-x-auto pb-2 recipe-scroller mx-auto">
+            <div class="grid grid-cols-3 grid-rows-2 gap-2 sm:gap-3 md:gap-4 mx-auto" style="grid-auto-rows: 1fr;" id="recipe-grid">
+                <div style="background-color: #fcd4b4; border: 3px solid #FAB47F;" class="p-2 sm:p-3 rounded-xl flex flex-col items-center justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="recipe-img-container flex items-center justify-center mb-1 rounded-full overflow-hidden">
+                        <img id="cupcake-img" src="img/3.png" alt="Cupcake" class="object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/fcd4b4/894232?text=Cupcake';">
+                    </div>
+                    <h2 class="font-bold text-[#894232] mb-1 text-sm sm:text-base md:text-lg leading-tight text-center">Cupcake</h2>
+                    <button data-recipe-name="Cupcake" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-0.5 sm:py-1 md:py-1 rounded-full font-semibold text-xs sm:text-xs md:text-sm" style="border: 1px solid #F96884;">Ver Receita</button>
                 </div>
-                <h2 class="font-bold text-[#894232] mb-2 sm:mb-3 text-xl sm:text-2xl leading-tight text-center">Cupcake</h2>
-                <button data-recipe-name="Cupcake" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-1 sm:py-2 rounded-full font-semibold text-md sm:text-lg" style="border: 3px solid #F96884;">Ver Receita</button>
+                <div style="background-color: #D1C0EF; border: 3px solid #B6A0DC;" class="p-2 sm:p-3 rounded-xl flex flex-col items-center justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="recipe-img-container flex items-center justify-center mb-1 rounded-full overflow-hidden">
+                        <img id="brigadeiro-img" src="img/8.png" alt="Brigadeiro" class="object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/D1C0EF/894232?text=Brigadeiro';">
+                    </div>
+                    <h2 class="font-bold text-[#894232] mb-1 text-sm sm:text-base md:text-lg leading-tight text-center">Brigadeiro</h2>
+                    <button data-recipe-name="Brigadeiro" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-0.5 sm:py-1 md:py-1 rounded-full font-semibold text-xs sm:text-xs md:text-sm" style="border: 1px solid #F96884;">Ver Receita</button>
+                </div>
+                <div style="background-color: #F0D5F5; border: 3px solid #DEAEE1;" class="p-2 sm:p-3 rounded-xl flex flex-col items-center justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="recipe-img-container flex items-center justify-center mb-1 rounded-full overflow-hidden">
+                        <img id="cookie-img" src="img/5.png" alt="Cookie" class="object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/F0D5F5/894232?text=Cookie';">
+                    </div>
+                    <h2 class="font-bold text-[#894232] mb-1 text-sm sm:text-base md:text-lg leading-tight text-center">Cookie</h2>
+                    <button data-recipe-name="Cookie" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-0.5 sm:py-1 md:py-1 rounded-full font-semibold text-xs sm:text-xs md:text-sm" style="border: 1px solid #F96884;">Ver Receita</button>
+                </div>
+                <div style="background-color: #C2E0B8; border: 3px solid #9CC790;" class="p-2 sm:p-3 rounded-xl flex flex-col items-center justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="recipe-img-container flex items-center justify-center mb-1 rounded-full overflow-hidden">
+                        <img id="paomel-img" src="img/9.png" alt="Pão de Mel" class="object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/C2E0B8/894232?text=Pão+de+Mel';">
+                    </div>
+                    <h2 class="font-bold text-[#894232] mb-1 text-sm sm:text-base md:text-lg leading-tight text-center">Pão de Mel</h2>
+                    <button data-recipe-name="Pão de Mel" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-0.5 sm:py-1 md:py-1 rounded-full font-semibold text-xs sm:text-xs md:text-sm" style="border: 1px solid #F96884;">Ver Receita</button>
+                </div>
+                <div style="background-color: #FDE8C4; border: 3px solid #F9CF9C;" class="p-2 sm:p-3 rounded-xl flex flex-col items-center justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="recipe-img-container flex items-center justify-center mb-1 rounded-full overflow-hidden">
+                        <img id="bolo-img" src="img/6.png" alt="Bolo de Cenoura" class="object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/FDE8C4/894232?text=Bolo';">
+                    </div>
+                    <h2 class="font-bold text-[#894232] mb-1 text-sm sm:text-base md:text-lg leading-tight text-center">Bolo de Cenoura</h2>
+                    <button data-recipe-name="Bolo de Cenoura" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-0.5 sm:py-1 md:py-1 rounded-full font-semibold text-xs sm:text-xs md:text-sm" style="border: 1px solid #F96884;">Ver Receita</button>
+                </div>
+                <div style="background-color: #F2E1C8; border: 3px solid #D6C4A0;" class="p-2 sm:p-3 rounded-xl flex flex-col items-center justify-between shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <div class="recipe-img-container flex items-center justify-center mb-1 rounded-full overflow-hidden">
+                        <img id="pudim-img" src="img/7.png" alt="Pudim" class="object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/F2E1C8/894232?text=Pudim';">
+                    </div>
+                    <h2 class="font-bold text-[#894232] mb-1 text-sm sm:text-base md:text-lg leading-tight text-center">Pudim</h2>
+                    <button data-recipe-name="Pudim" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-0.5 sm:py-1 md:py-1 rounded-full font-semibold text-xs sm:text-xs md:text-sm" style="border: 1px solid #F96884;">Ver Receita</button>
+                </div>
             </div>
-            <div style="background-color: #F0D5F5; border: 4px solid #DEAEE1;" class="p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-between shadow-md hover:shadow-xl transition-shadow duration-300 min-h-[200px]">
-                <div class="recipe-img-container flex items-center justify-center mb-3 rounded-full overflow-hidden">
-                    <img id="cookie-img" src="img/5.png" alt="Cookie" class="object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/F0D5F5/894232?text=Cookie';">
+            
+            <div class="flex justify-center mt-4">
+                <div class="flex items-center space-x-3 recipe-nav">
+                    <button class="recipe-nav-button bg-pink-200 hover:bg-pink-300 text-pink-700 rounded-full w-8 h-8 flex items-center justify-center shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-pink-400" id="prev-page">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="text-center text-xs sm:text-sm font-medium text-pink-700">
+                        <span class="page-indicator">Página 1/1</span>
+                    </div>
+                    <button class="recipe-nav-button bg-pink-200 hover:bg-pink-300 text-pink-700 rounded-full w-8 h-8 flex items-center justify-center shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-pink-400" id="next-page">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
                 </div>
-                <h2 class="font-bold text-[#894232] mb-2 sm:mb-3 text-xl sm:text-2xl leading-tight text-center">Cookie</h2>
-                <button data-recipe-name="Cookie" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-1 sm:py-2 rounded-full font-semibold text-md sm:text-lg" style="border: 3px solid #F96884;">Ver Receita</button>
-            </div>
-            <div style="background-color: #FDE8C4; border: 4px solid #F9CF9C;" class="p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-between shadow-md hover:shadow-xl transition-shadow duration-300 min-h-[200px]">
-                <div class="recipe-img-container flex items-center justify-center mb-3 rounded-full overflow-hidden">
-                    <img id="bolo-img" src="img/6.png" alt="Bolo de Cenoura" class="object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/FDE8C4/894232?text=Bolo';">
-                </div>
-                <h2 class="font-bold text-center text-[#894232] mb-2 sm:mb-3 text-xl sm:text-2xl leading-tight">Bolo de Cenoura</h2>
-                <button data-recipe-name="Bolo de Cenoura" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-1 sm:py-2 rounded-full font-semibold text-md sm:text-lg" style="border: 3px solid #F96884;">Ver Receita</button>
-            </div>
-            <div style="background-color: #F2E1C8; border: 4px solid #D6C4A0;" class="p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-between shadow-md hover:shadow-xl transition-shadow duration-300 min-h-[200px]">
-                <div class="recipe-img-container flex items-center justify-center mb-3 rounded-full overflow-hidden">
-                    <img id="pudim-img" src="img/7.png" alt="Pudim" class="object-contain" onerror="this.onerror=null;this.src='https://placehold.co/80x80/F2E1C8/894232?text=Pudim';">
-                </div>
-                <h2 class="font-bold text-[#894232] mb-2 sm:mb-3 text-xl sm:text-2xl leading-tight text-center">Pudim</h2>
-                <button data-recipe-name="Pudim" class="view-recipe-btn bg-[#FF7A95] candy-button text-white w-full py-1 sm:py-2 rounded-full font-semibold text-md sm:text-lg" style="border: 3px solid #F96884;">Ver Receita</button>
             </div>
         </div>
 
         <footer style="background-color: #FEE9EB;" class="text-center mt-6 sm:mt-8 -mx-4 -mb-4 sm:-mx-6 sm:-mb-6 md:-mx-8 md:-mb-8 p-4 sm:p-6 rounded-b-2xl">
-            <p class="flex items-center justify-center font-bold text-xl sm:text-2xl text-[#894232]">
-                Feito com amor <span class="ml-2 text-xl sm:text-2xl" style="color: #FF7A95;">🩷</span>
-            </p>
+            <div class="flex flex-col items-center">
+                <div class="flex items-center justify-center mb-2">
+                    <div class="w-10 h-0.5 bg-pink-300 rounded-full mx-2 divider"></div>
+                    <img src="img/gigi.png" alt="Logo Mini" class="w-4 h-4 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/16x16/fcd9e4/772e2d?text=Gi';">
+                    <div class="w-10 h-0.5 bg-pink-300 rounded-full mx-2 divider"></div>
+                </div>
+                <p class="flex items-center justify-center font-bold text-sm sm:text-lg text-[#894232]">
+                    Feito com amor <span class="mx-1.5 text-base sm:text-xl heart-icon" style="color: #FF7A95;">🩷</span>
+                </p>
+                <p class="text-[11px] text-pink-700 mt-0.5 font-medium">Receitas doces para adoçar seu dia</p>
+                <div class="flex space-x-4 mt-2.5 social-icons">
+                    <a href="#" class="text-pink-500 hover:text-pink-700 transition-colors transform hover:scale-110 duration-300" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-pink-500 hover:text-pink-700 transition-colors transform hover:scale-110 duration-300" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-pink-500 hover:text-pink-700 transition-colors transform hover:scale-110 duration-300" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4.5 w-4.5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-[9px] text-pink-600 mt-2">© 2025 Delícias da Gi • Todos os direitos reservados</p>
+            </div>
         </footer>
     </main>
 
