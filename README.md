@@ -1,5 +1,5 @@
 # ✨🧁 Delícias da Gi 🍰✨
-https://github.com/user-attachments/assets/52fabdce-c375-4c6e-b451-ea525095eff2
+https://github.com/user-attachments/assets/21158c1b-cc51-4b59-988f-f3e86213d032
 > *Projeto sendo executado com minha chave Api em ação* 
 
 <p align="center">
