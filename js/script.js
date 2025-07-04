@@ -382,6 +382,25 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
+        // Configurar o botão para alternar a visibilidade da senha
+        const togglePasswordVisibility = document.getElementById('toggle-password-visibility');
+        if (togglePasswordVisibility) {
+            togglePasswordVisibility.addEventListener('click', function() {
+                const showIcon = this.querySelector('.eye-icon-show');
+                const hideIcon = this.querySelector('.eye-icon-hide');
+                
+                if (apiKeyInput.type === 'password') {
+                    apiKeyInput.type = 'text';
+                    showIcon.classList.add('hidden');
+                    hideIcon.classList.remove('hidden');
+                } else {
+                    apiKeyInput.type = 'password';
+                    showIcon.classList.remove('hidden');
+                    hideIcon.classList.add('hidden');
+                }
+            });
+        }
+        
         // Aplicar estado inicial do botão
         validateApiKey();
         

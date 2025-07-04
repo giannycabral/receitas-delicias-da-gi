@@ -18,6 +18,16 @@ body {
     box-shadow: 0 0 0 2px rgba(255, 122, 149, 0.2);
 }
 
+#toggle-password-visibility {
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#toggle-password-visibility:hover {
+    color: #FF7A95 !important;
+    transform: scale(1.1);
+}
+
 .btn-transition {
     transition: all 0.2s ease;
 }
